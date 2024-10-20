@@ -1,0 +1,7 @@
+env/
+*.exe
+build/
+dist/
+*.spec
+key_log.csv
+keylog.spec

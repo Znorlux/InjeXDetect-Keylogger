@@ -1,0 +1,6 @@
+pyusb  
+hid
+pynput
+wmi
+libusb
+
