@@ -32,20 +32,6 @@ El objetivo principal es desarrollar un prototipo basado en machine learning que
 
 ## Compilación y Ejecución de los Scripts
 
-### Listador de dispositivos HID (Go)
-
-Para compilar el script de Go, asegúrate de tener configurado tu entorno de desarrollo con Go instalado. Luego, ejecuta:
-
-```bash
-go build keyboard-list.go
-```
-
-Para ejecutar el script compilado:
-
-```bash
-./keyboard-list.exe
-```
-
 ### Keylogger (Python)
 
 ```bash
@@ -59,3 +45,21 @@ Luego ejecutar en
 ```
 
 Para cerrar el keylogger presionar "[CMD] (tecla windows) + ESCAPE"
+
+### Listador de dispositivos HID (Go)
+
+Para compilar el script de Go, asegúrate de tener configurado tu entorno de desarrollo con Go instalado. Luego, ejecuta:
+
+```bash
+cd ./Keyboard-list
+```
+
+```bash
+go build keyboard-list.go
+```
+
+Para ejecutar el script compilado:
+
+```bash
+./keyboard-list.exe
+```
