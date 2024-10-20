@@ -7,7 +7,7 @@ import (
 	"github.com/StackExchange/wmi"
 )
 
-// Win32_PnPEntity es la estructura que representa la entidad de Plug and Play.
+// Win32_PnPEntity es una estructura que representa la clase Win32_PnPEntity de WMI (Windows Management Instrumentation) (https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-pnpentity)
 type Win32_PnPEntity struct {
 	Name         string
 	Manufacturer string
@@ -24,7 +24,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Mostrar todos los dispositivos PnP
+	
 	for _, device := range devices {
 		if device.Present {
 			fmt.Println("Device Name:", device.Name)
@@ -32,7 +32,7 @@ func main() {
 			fmt.Println("Description:", device.Description)
 			fmt.Println("Device ID:", device.DeviceID)
 
-			// Marcar dispositivos que son teclados
+			// dispositivos que son teclados (se debe mejorar su detección)
 			if device.Description == "Dispositivo de teclado HID" || device.Description == "Teclado estándar" {
 				fmt.Println("<< Este dispositivo es un teclado HID >>")
 			}
@@ -40,7 +40,6 @@ func main() {
 		}
 	}
 
-	// Esperar a que el usuario presione Enter
 	fmt.Println("Presiona Enter para salir...")
 	fmt.Scanln()
 }
