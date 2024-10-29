@@ -3,4 +3,4 @@ hid
 pynput
 wmi
 libusb
-
+pyinstaller
